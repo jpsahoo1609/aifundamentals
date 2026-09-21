@@ -1,0 +1,21 @@
+name: CI Pipeline-Data Quality
+
+on:
+  push: # trigger the workflow on push events 
+
+jobs:
+  test: # it is the job ID , a nam we choose for this job 
+  runs on: ubuntu-latest # the job will run on the latest version of ubuntu
+  steps: # we will add steps to this job , telling github to do exactly what after what 
+    - name: Checkout code # this is the name of the step 
+      uses: actions/checkout@v6 # this is saying - download/checkout the code from the repo to the runner machine/ use a reusable github 
+      # actions 
+
+    - name: Show files
+      run: ls # execute a shell command on the github action runner , 'ls' is the command to list all the files in the current directory
+      
+    - name: Check Python Syntax
+      run: python -m py_compile *.py # this is a shell command to check the syntax of all the python files in the current directory
+       
+
+      # after adding our steps/checks , we need to commit the workflow file to the branch 1 
