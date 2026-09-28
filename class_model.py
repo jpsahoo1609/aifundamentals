@@ -11,7 +11,7 @@ class Student:
     def greeetings(self):
         return f'Hello {self.name}.Welcome to {self.city}.'
 
-s1 = Student("JP", 28, "Bangalore") # creating a obkect of the class Student and passing the values to the constructor
+s1 = Student("JP", 28, "Bangalore") # creating a object of the class Student and passing the values to the constructor
 s2 = Student('Amy', 25, 'New York')
 
 print(s1.display_info())
